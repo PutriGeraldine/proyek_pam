@@ -1,0 +1,50 @@
+name: pam_proyek
+description: "A new Flutter project."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.5.1 <4.0.0"
+
+dependencies:
+  animated_bottom_navigation_bar: ^0.3.3
+  cupertino_icons: ^1.0.8
+  firebase_auth: ^5.3.1
+  firebase_core: ^3.6.0
+  flutter:
+    sdk: flutter
+  flutter_vector_icons: ^2.0.0
+  http: ^1.2.2
+  page_transition: ^2.0.5
+
+dev_dependencies:
+  flutter_lints: ^5.0.0
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/code-scan.png
+    - assets/images/code-scan-two.png
+    - assets/images/add-cart.png
+    - assets/images/favorited.png
+    - assets/images/google.png
+    - assets/images/accessories_one.png
+    - assets/images/accessories_two.png
+    - assets/images/accessories_three.png
+    - assets/images/accessories_four.png
+    - assets/images/accessories_five.png
+    - assets/images/accessories_six.png
+    - assets/images/accessories_seven.png
+    - assets/images/accessories_eight.jpg
+    - assets/images/onboarding1.png
+    - assets/images/onboarding2.png
+    - assets/images/onboarding3.png
+    - assets/images/profile.jpg
+    - assets/images/reset-password.png
+    - assets/images/signin.png
+    - assets/images/upload.png
+    - assets/images/verified.png
