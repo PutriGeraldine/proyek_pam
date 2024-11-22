@@ -1,11 +1,11 @@
-import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:pam_proyek/constants.dart';
 import 'package:pam_proyek/ui/root_page.dart';
 import 'package:pam_proyek/ui/screens/forgot_password.dart';
 import 'package:pam_proyek/ui/screens/signup_page.dart';
 import 'package:pam_proyek/ui/screens/widgets/custom_textfield.dart';
-import 'package:page_transition/page_transition.dart';
 
 class SignIn extends StatefulWidget {
   const SignIn({super.key});
@@ -144,6 +144,7 @@ class _SignInState extends State<SignIn> {
     try {
       await _auth.signInWithEmailAndPassword(email: email, password: password);
       Navigator.pushReplacement(
+        // ignore: use_build_context_synchronously
         context,
         PageTransition(
           child: const RootPage(),
@@ -160,6 +161,7 @@ class _SignInState extends State<SignIn> {
         message = 'Login failed. Please try again.';
       }
 
+      // ignore: use_build_context_synchronously
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(content: Text(message)),
       );

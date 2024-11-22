@@ -1,14 +1,15 @@
-
 import 'package:flutter/material.dart';
 import 'package:pam_proyek/constants.dart';
 
 class ProfileWidget extends StatelessWidget {
   final IconData icon;
   final String title;
+  final VoidCallback onTap;
   const ProfileWidget({
     super.key,
     required this.icon,
     required this.title,
+    required this.onTap,
   });
 
   @override

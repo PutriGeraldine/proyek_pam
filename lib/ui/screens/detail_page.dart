@@ -196,7 +196,7 @@ class _DetailPageState extends State<DetailPage> {
                   ),
                   Expanded(
                     child: Text(
-                      accessoriesList[widget.accessoriesId].decription,
+                      accessoriesList[widget.accessoriesId].description,
                       textAlign: TextAlign.justify,
                       style: TextStyle(
                         height: 1.5,
@@ -219,16 +219,6 @@ class _DetailPageState extends State<DetailPage> {
             Container(
               height: 50,
               width: 50,
-              child: IconButton(onPressed: (){
-                setState(() {
-                  bool isSelected = toggleIsSelected(accessoriesList[widget.accessoriesId].isSelected);
-
-                  accessoriesList[widget.accessoriesId].isSelected = isSelected;
-                });
-              }, icon: Icon(
-                Icons.shopping_cart,
-                color: accessoriesList[widget.accessoriesId].isSelected == true ? Colors.white : Constants.primaryColor,
-              )),
               decoration: BoxDecoration(
                   color: accessoriesList[widget.accessoriesId].isSelected == true ? Constants.primaryColor.withOpacity(.5) : Colors.white,
                   borderRadius: BorderRadius.circular(50),
@@ -239,6 +229,16 @@ class _DetailPageState extends State<DetailPage> {
                       color: Constants.primaryColor.withOpacity(.3),
                     ),
                   ]),
+              child: IconButton(onPressed: (){
+                setState(() {
+                  bool isSelected = toggleIsSelected(accessoriesList[widget.accessoriesId].isSelected);
+
+                  accessoriesList[widget.accessoriesId].isSelected = isSelected;
+                });
+              }, icon: Icon(
+                Icons.shopping_cart,
+                color: accessoriesList[widget.accessoriesId].isSelected == true ? Colors.white : Constants.primaryColor,
+              )),
             ),
             const SizedBox(
               width: 20,

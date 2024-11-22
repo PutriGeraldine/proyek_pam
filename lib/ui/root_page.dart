@@ -1,6 +1,7 @@
 
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:pam_proyek/constants.dart';
 import 'package:pam_proyek/models/accessoriess.dart';
 import 'package:pam_proyek/ui/scan_page.dart';
@@ -8,7 +9,6 @@ import 'package:pam_proyek/ui/screens/cart_page.dart';
 import 'package:pam_proyek/ui/screens/favorite_page.dart';
 import 'package:pam_proyek/ui/screens/home_page.dart';
 import 'package:pam_proyek/ui/screens/profile_page.dart';
-import 'package:page_transition/page_transition.dart';
 
 class RootPage extends StatefulWidget {
   const RootPage({super.key});

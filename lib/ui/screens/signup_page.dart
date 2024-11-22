@@ -1,9 +1,9 @@
-import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:pam_proyek/constants.dart';
-import 'package:pam_proyek/ui/screens/widgets/custom_textfield.dart';
-import 'package:pam_proyek/ui/screens/signin_page.dart';
+import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
+import 'package:pam_proyek/constants.dart';
+import 'package:pam_proyek/ui/screens/signin_page.dart';
+import 'package:pam_proyek/ui/screens/widgets/custom_textfield.dart';
 
 class SignUp extends StatefulWidget {
   const SignUp({super.key});
@@ -130,6 +130,7 @@ class _SignUpState extends State<SignUp> {
       await _auth.createUserWithEmailAndPassword(email: email, password: password);
       // Optional: You can store the user's full name in the database if needed
       Navigator.pushReplacement(
+        // ignore: use_build_context_synchronously
         context,
         PageTransition(
           child: const SignIn(),
@@ -146,6 +147,7 @@ class _SignUpState extends State<SignUp> {
         message = 'Registration failed. Please try again.';
       }
 
+      // ignore: use_build_context_synchronously
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(content: Text(message)),
       );

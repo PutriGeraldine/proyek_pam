@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:pam_proyek/constants.dart';
 import 'package:pam_proyek/models/accessoriess.dart';
 import 'package:pam_proyek/ui/screens/detail_page.dart';
 import 'package:pam_proyek/ui/screens/widgets/accessories_widget.dart';
-import 'package:page_transition/page_transition.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -131,6 +131,10 @@ class _HomePageState extends State<HomePage> {
                     child: Container(
                       width: 200,
                       margin: const EdgeInsets.symmetric(horizontal: 10),
+                      decoration: BoxDecoration(
+                        color: Constants.primaryColor.withOpacity(.8),
+                        borderRadius: BorderRadius.circular(20),
+                      ),
                       child: Stack(
                         children: [
                           Positioned(
@@ -139,6 +143,10 @@ class _HomePageState extends State<HomePage> {
                             child: Container(
                               height: 50,
                               width: 50,
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(50),
+                              ),
                               child: IconButton(
                                 onPressed: () {
                                   setState(() {
@@ -154,10 +162,6 @@ class _HomePageState extends State<HomePage> {
                                   color: Constants.primaryColor,
                                 ),
                                 iconSize: 30,
-                              ),
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(50),
                               ),
                             ),
                           ),
@@ -211,10 +215,6 @@ class _HomePageState extends State<HomePage> {
                             ),
                           ),
                         ],
-                      ),
-                      decoration: BoxDecoration(
-                        color: Constants.primaryColor.withOpacity(.8),
-                        borderRadius: BorderRadius.circular(20),
                       ),
                     ),
                   );

@@ -1,13 +1,14 @@
-
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:pam_proyek/constants.dart';
 import 'package:pam_proyek/models/accessoriess.dart';
 import 'package:pam_proyek/ui/screens/detail_page.dart';
-import 'package:page_transition/page_transition.dart';
 
 class AccessoriesWidget extends StatelessWidget {
   const AccessoriesWidget({
-    super.key, required this.index, required this.accessoriesList,
+    super.key,
+    required this.index,
+    required this.accessoriesList,
   });
 
   final int index;
@@ -20,12 +21,14 @@ class AccessoriesWidget extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         Navigator.push(
-            context,
-            PageTransition(
-                child: DetailPage(
-                  accessoriesId: accessoriesList[index].accessoriesId,
-                ),
-                type: PageTransitionType.bottomToTop));
+          context,
+          PageTransition(
+            child: DetailPage(
+              accessoriesId: accessoriesList[index].accessoriesId,
+            ),
+            type: PageTransitionType.bottomToTop,
+          ),
+        );
       },
       child: Container(
         decoration: BoxDecoration(
@@ -57,8 +60,7 @@ class AccessoriesWidget extends StatelessWidget {
                   right: 0,
                   child: SizedBox(
                     height: 80.0,
-                    child:
-                    Image.asset(accessoriesList[index].imageURL),
+                    child: Image.asset(accessoriesList[index].imageURL),
                   ),
                 ),
                 Positioned(
@@ -84,14 +86,14 @@ class AccessoriesWidget extends StatelessWidget {
             Container(
               padding: const EdgeInsets.only(right: 10),
               child: Text(
-                r'$' + accessoriesList[index].price.toString(),
+                accessoriesList[index].formattedPrice, 
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
-                  fontSize: 18.0,
-                  color: Constants.primaryColor,
+                  fontSize: 20.0,
+                  color: Colors.green,
                 ),
               ),
-            )
+            ),
           ],
         ),
       ),

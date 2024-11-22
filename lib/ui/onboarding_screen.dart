@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pam_proyek/constants.dart';
+
 import 'screens/signin_page.dart';
 
 class OnboardingScreen extends StatefulWidget {
@@ -144,6 +145,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   }
 }
 
+// ignore: camel_case_types
 class createPage extends StatelessWidget {
   final String image;
   final String title;
